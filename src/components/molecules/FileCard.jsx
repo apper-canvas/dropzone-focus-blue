@@ -83,9 +83,9 @@ const FileCard = ({ file, onUpload, onRemove, onRetry }) => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-1">
+<div className="flex items-center justify-between mt-1">
             <span className="text-xs text-gray-500">
-              {formatFileSize(file.size)} • {file.type.split("/")[1]?.toUpperCase() || "FILE"}
+              {formatFileSize(file.size)} • {file.type?.split("/")[1]?.toUpperCase() || "FILE"}
             </span>
             {file.status === "uploading" && (
               <span className="text-xs font-medium text-info">

@@ -7,7 +7,7 @@ const FileList = ({ files, onUpload, onRemove, onRetry }) => {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold text-gray-800">Upload Queue</h2>
+<h2 className="text-xl font-semibold text-gray-800">File Manager</h2>
         <div className="text-sm text-gray-500">
           {files.length} file{files.length > 1 ? "s" : ""}
         </div>

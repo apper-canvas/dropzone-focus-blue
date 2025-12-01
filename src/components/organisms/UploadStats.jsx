@@ -10,11 +10,10 @@ const UploadStats = ({ files, onUploadAll, onClearAll }) => {
   const pendingFiles = files.filter(f => f.status === "pending").length
   const uploadingFiles = files.filter(f => f.status === "uploading").length
   
-  const totalSize = files.reduce((acc, file) => acc + file.size, 0)
+  const totalSize = files.reduce((acc, file) => acc + (file.size || 0), 0)
   const uploadedSize = files
     .filter(f => f.status === "success")
-    .reduce((acc, file) => acc + file.size, 0)
-
+    .reduce((acc, file) => acc + (file.size || 0), 0)
   const formatFileSize = (bytes) => {
     if (bytes === 0) return "0 B"
     const k = 1024
