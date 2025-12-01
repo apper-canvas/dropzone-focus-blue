@@ -312,6 +312,4 @@ class UploadService {
     return { ...this.config };
   }
 }
-
 export const uploadService = new UploadService();
-export const uploadService = new UploadService()
